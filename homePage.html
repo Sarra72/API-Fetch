@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css_Files/all.css">
+    <link rel="stylesheet" href="css_Files/bootstrap.min.css">
+    <link rel="stylesheet" href="css_Files/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+    <title>Home - shoppingoo</title>
+
+</head>
+<body>
+
+    <nav class="py-3 w-100 text-bg-dark ">
+        <div class="container d-flex align-items-center justify-content-between flex-wrap">
+            <h2 style="font-weight: bold;">Shoppingoo</h2>
+            <div class="nav-right d-flex align-items-center gap-4">
+            <div class="search-wrapper">
+                <div class="search-box d-flex align-items-center position-relative">
+                    <input type="text" class="search-input form-control rounded-5 my-2" placeholder="Search...">
+                    <i class="fas fa-search search-icon position-absolute text-dark" style="right:15px;"></i>
+                </div>
+            </div>
+            <i class="fa-solid fa-cart-shopping position-relative" id="cart-icon" style="font-size: 24px;">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cart-count" style="font-size: 12px;"></span>
+            </i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="space"></div>
+
+    <div class="container products-container d-flex flex-wrap gap-4">
+        
+    </div>
+    
+
+    <div class="cart-close" id="products-cart">
+        <div class="container p-0">
+            <div class="cart-head d-flex align-items-center justify-content-between">
+                <h3 class="text-light p-4 cart-title">Cart</h3>
+                <i class="fa-solid fa-x text-light p-2 mx-4 close"></i>
+            </div>
+            <div class="products-cart d-flex flex-column gap-2 " id="prod-cart">
+               
+                
+
+            </div>
+            </div>
+
+            <!-- <button class="btn rounded-0 w-100 btn-cart-close border-0 text-light position-absolute ">Close</button> -->
+
+        </div>
+
+
+    </div>
+
+    
+    <div class="space"></div>
+
+    <script src="Js/index.js"></script>
+</body>
+</html>
