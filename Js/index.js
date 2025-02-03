@@ -53,11 +53,12 @@ seachInput.addEventListener("input",(m)=>{
     var value = m.target.value;
     var element ='';
 
-    dataList.forEach(product=>{
-        if(product.title.toLowerCase().includes(value.toLowerCase())){
-            element+= productInHomePage(product);
+    for(i=0 ; i< dataList.length ;i++ ){
+        if(dataList[i].title.toLowerCase().includes(value.toLowerCase())){
+            element+= productInHomePage(i);
         }
-    })
+    }
+
     prodContainer.innerHTML=element;
 
 })
