@@ -23,8 +23,7 @@ async function fetchData() {
     if(response.ok){
     const data = await response.json();
     dataList = data;
-    localStorage.setItem('products',JSON.stringify( dataList));
-    
+    displayProducts();
     }
 }
 
@@ -166,18 +165,17 @@ function updateCount(i){
 function Delete(trashIcon){
     let itemElement = trashIcon.closest('.product-cart');
     const itemIndex = itemElement.getAttribute('data-id');
- 
-    cartItems = cartItems.filter(item => item !== parseInt(itemIndex));
-    cartCount -= 1;
- 
-    document.getElementById("cart-count").innerHTML = cartCount;
- 
-    itemElement.remove();
 
+    const numSpan = itemElement.querySelector('.num');
+    let currentQuantity = parseInt(numSpan.textContent);
+
+    cartItems = cartItems.filter(item => item.index !== parseInt(itemIndex));
+    cartCount -= currentQuantity;
+
+    document.getElementById("cart-count").innerHTML = cartCount;
+
+    itemElement.remove();
 }
 
-window.onload = function() {
-    fetchData();
-};
-dataList=JSON.parse(localStorage.getItem('products'));
-displayProducts();
+
+fetchData(); 
